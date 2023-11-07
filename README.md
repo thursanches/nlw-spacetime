@@ -19,8 +19,10 @@ An app (mobile and web) for reccording memorys. Is possible to add text, photos 
     npm install
   </li>
   <li>
-<h1>Reference</h1>
-<i>It Was made in NLW Spacetime.</i>
+
     npm run start
   </li>
 </ol>
+
+<h1>Reference</h1>
+<i>It Was made in Rocketseat NLW Spacetime.</i>
