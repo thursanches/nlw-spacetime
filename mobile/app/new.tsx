@@ -24,6 +24,7 @@ export default function NewMemory() {
           </TouchableOpacity>
         </Link>
       </View>
+      
       <View className="mt-6 space-y-6">
         <View className="flex-row items-center gap-2">
           <Switch 
@@ -34,7 +35,14 @@ export default function NewMemory() {
           />
           <Text className="font-body text-base text-gray-200">Tornar memória pública</Text>
         </View>
-        <TouchableOpacity className="h-32 justify-center rounded-lg border"
+        <TouchableOpacity className="h-32 justify-center rounded-lg border border-dashed border-gray-500 bg-black/20">
+          <View className="flex-row items-center gap-2">
+            <Icon name="image" color="#FFF" />
+            <Text className="font-body text-sm text-gray-200">
+              Adicionar foto ou vídeo de capa
+            </Text>
+          </View>
+        </TouchableOpacity>
       </View>
     </View>
   )
