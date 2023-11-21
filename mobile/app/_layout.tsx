@@ -56,8 +56,8 @@ const [isUserAuthenticated, setIsUserAuthenticate] = useState<null | boolean>(
         }}
       >
         <Stack.Screen name="index" redirect={isUserAuthenticated} />
-        <Stack.Screen name="new"/>
         <Stack.Screen name="memories"/>
+        <Stack.Screen name="new"/>
       </Stack>
     </ImageBackground>
   )
