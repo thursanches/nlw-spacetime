@@ -22,6 +22,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
         id: memory.id,
         coverUrl: memory.coverUrl,
         excerpt: memory.content.substring(0, 115).concat("..."),
+        createdAt: memory.createdAt,
       };
     });
   });
@@ -40,7 +41,7 @@ export async function memoriesRoutes(app: FastifyInstance) {
     });
 
     if (!memory.isPublic && memory.userId != request.user.sub) {
-      return reply.status(401).send()
+      return reply.status(401).send();
     }
 
     return memory;
@@ -85,11 +86,11 @@ export async function memoriesRoutes(app: FastifyInstance) {
     let memory = await prisma.memory.findUniqueOrThrow({
       where: {
         id,
-      }
-    })
+      },
+    });
 
     if (memory.userId != request.user.sub) {
-      return reply.status(401).send()
+      return reply.status(401).send();
     }
 
     memory = await prisma.memory.update({
@@ -116,11 +117,11 @@ export async function memoriesRoutes(app: FastifyInstance) {
     const memory = await prisma.memory.findUniqueOrThrow({
       where: {
         id,
-      }
-    })
+      },
+    });
 
     if (memory.userId != request.user.sub) {
-      return reply.status(401).send()
+      return reply.status(401).send();
     }
 
     await prisma.memory.delete({
